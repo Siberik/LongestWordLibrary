@@ -23,7 +23,13 @@ namespace LongestWordLibrary
             {
                 return string.Empty;
             }
-            var text2 = text.Replace(",","").Replace(".","").Replace("!","").Replace("?","").Split(' ');
+            if (text.All(c=>char.IsDigit(c)))
+            {
+                return string.Empty;
+            }
+            text =text.Replace("!", "").Replace("?", "");
+            var text2 = text.Split(' ',',','.');
+
             int maxlen = 0, index = 0;
             for (int i = 0; i < text2.Length; i++)
             {

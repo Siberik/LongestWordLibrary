@@ -43,5 +43,29 @@ namespace LongestWordLibraryTests
             //Assert
             Assert.AreEqual(excepted, actual);
         }
+        //Проверка слов с символами пунктуации
+        [TestMethod]
+        public void FindLongestWord_SpecialSymbols_ReturnedString()
+        {
+            //Arrange
+            string text = "Ахахах! Смешно.Нонетнесмешно";
+            string excepted = "нонетнесмешно";
+            //Act
+            string actual = LongestWordLibraryClass.FindLongestWord(text);
+            //Assert
+            Assert.AreEqual(excepted, actual);
+        }
+        //Проверка на числа
+        [TestMethod]
+        public void FindLongestWord_Numbers_ReturnedString()
+        {
+            //Arrange
+            string text = "3232442334";
+            string excepted = string.Empty;
+            //Act
+            string actual = LongestWordLibraryClass.FindLongestWord(text);
+            //Assert
+            Assert.AreEqual(excepted, actual);
+        }
     }
 }
