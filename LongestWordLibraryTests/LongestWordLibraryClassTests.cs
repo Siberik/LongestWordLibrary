@@ -7,7 +7,10 @@ namespace LongestWordLibraryTests
     [TestClass]
     public class LongestWordLibraryClassTests
     {
-        //Проверка на пустую строку
+
+        /// <summary>
+        ///  Проверка на пустую строку
+        /// </summary>
         [TestMethod]
         public void FindLongestWord_StringEmpty_ReturnedStringEmpty()
         {
@@ -19,7 +22,9 @@ namespace LongestWordLibraryTests
             //Assert
             Assert.AreEqual(excepted, actual);
         }
-        //Проверка на наличие самого длинного слова в русском тексте
+        /// <summary>
+        /// Проверка на наличие самого длинного слова в русском тексте
+        /// </summary>
         [TestMethod]
         public void FindLongestWord_RuLongWond_ReturnedString()
         {
@@ -31,7 +36,9 @@ namespace LongestWordLibraryTests
             //Assert
             Assert.AreEqual(excepted, actual);
         }
-        //Проверка на наличие самого длинного слова в английском тексте
+        /// <summary>
+        /// Проверка на наличие самого длинного слова в английском тексте
+        /// </summary>
         [TestMethod]
         public void FindLongestWord_EngLongWord_ReturnedString()
         {
@@ -43,7 +50,9 @@ namespace LongestWordLibraryTests
             //Assert
             Assert.AreEqual(excepted, actual);
         }
-        //Проверка слов с символами пунктуации
+        /// <summary>
+        /// Проверка слов с символами пунктуации
+        /// </summary>
         [TestMethod]
         public void FindLongestWord_SpecialSymbols_ReturnedString()
         {
@@ -55,7 +64,9 @@ namespace LongestWordLibraryTests
             //Assert
             Assert.AreEqual(excepted, actual);
         }
-        //Проверка на числа
+        /// <summary>
+        /// Проверка на числа
+        /// </summary>
         [TestMethod]
         public void FindLongestWord_Numbers_ReturnedString()
         {
