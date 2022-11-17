@@ -8,6 +8,15 @@ namespace LongestWordLibrary
 {
     public class LongestWordLibraryClass
     {
+        /// <summary>
+        /// Проверка на самое длинное слово
+        /// </summary>
+        /// <param name="text">
+        /// Переменная, содержащая текст
+        /// </param>
+        /// <returns>
+        /// Возвращает строку
+        /// </returns>
         public static string FindLongestWord(string text)
         {
             if(text==string.Empty)
@@ -24,7 +33,7 @@ namespace LongestWordLibrary
                     index = i;
                 }
             }
-           return  text2[index];
+           return  text2[index].ToLower();
         }
     }
 }
