@@ -23,7 +23,7 @@ namespace LongestWordLibrary
             {
                 return string.Empty;
             }
-            if (text.All(c=>char.IsDigit(c)))
+            if (text.Any(c=>char.IsDigit(c)))
             {
                 return string.Empty;
             }
